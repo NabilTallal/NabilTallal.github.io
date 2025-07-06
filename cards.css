@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #0e0e10;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1500px;
+}
+
+.card .more {
+  display: none;
+}
+
+.card .more:checked ~ .content {
+  transform: rotateY(180deg);
+}
+
+.card .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.card .front {
+  background-size: cover;
+  background-position: center;
+}
+
+.card .front .inner {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.card .front h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card .front .rating {
+  margin: 0.5rem 0;
+}
+
+.card .front .rating i {
+  color: #ffc107;
+  margin-right: 0.2rem;
+}
+
+.card .front .button {
+  background: #1f80e0;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+.card .back {
+  background: #1a1a1d;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.card .back .inner {
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card .back .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card .back .info span {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.card .back .description {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+.card .back .button {
+  align-self: center;
+  background: #1f80e0;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.card .back .button:hover {
+  background: #1761b3;
+}/*# sourceMappingURL=cards.css.map */
